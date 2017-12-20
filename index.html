@@ -1,0 +1,26 @@
+<html ng-app="myApp">
+	<head>
+		<title>AngularJS First Application</title>
+	</head>
+	
+	<body ng-controller="todoController">
+		<h1>Todo Application</h1>
+			<div class="newTodoWrapper">
+				<p>New Todo</p>
+				<input ng-model="newTodoText" type="text">
+				<button ng-click="addTodo()">Add</button>
+			</div>
+			<div class="myTodosWrapper">
+				<ul ng-repeat="todo in Todos">
+					<todo-directive id="todo.id" text="todo.text"></todo-directive>
+				</ul>
+			</div>
+        <div>test</div>
+
+		<script src="/node_modules/angular/angular.js"></script>
+		<script src="controllers/todoController.js"></script>
+		<script src="services/todoService.js"></script>
+		<script src="directives/todoDirective.js"></script>
+		
+	</body>
+</html>
